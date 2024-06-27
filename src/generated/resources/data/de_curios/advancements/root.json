@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "get_a_de_curio": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "de_curios:curios"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/bricks.png",
+    "description": {
+      "translate": "advancement.de_curios.root.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "de_curios:phantasmal_hood"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.de_curios.root"
+    }
+  },
+  "requirements": [
+    [
+      "get_a_de_curio"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

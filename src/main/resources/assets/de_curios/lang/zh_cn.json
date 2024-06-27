@@ -1,0 +1,20 @@
+{
+  "itemGroup.de_curios": "恶意引擎 - 饰品",
+
+  "item.de_curios.phantasmal_hood": "幻影兜帽",
+  "item.de_curios.kimen": "鬼面",
+  "item.de_curios.gluttony_necklace": "金饕项链",
+  "item.de_curios.monk_leglet": "僧侣脚镯",
+
+  "advancement.de_curios.root": "Cestoriza_ 大师之作",
+  "advancement.de_curios.root.desc": "获得第一个恶意引擎“自研”饰品",
+  "advancement.de_curios.phantasmal_hood": "破解幻术",
+  "advancement.de_curios.phantasmal_hood.desc": "获得饰品“幻影兜帽”",
+  "advancement.de_curios.kimen": "通用伪装",
+  "advancement.de_curios.kimen.desc": "获得饰品“鬼面”",
+  "advancement.de_curios.gluttony_necklace": "吃什么都像金苹果了",
+  "advancement.de_curios.gluttony_necklace.desc": "获得饰品“金饕项链”",
+  "advancement.de_curios.monk_leglet": "宁静致远",
+  "advancement.de_curios.monk_leglet.desc": "获得饰品“僧侣脚镯”"
+
+}

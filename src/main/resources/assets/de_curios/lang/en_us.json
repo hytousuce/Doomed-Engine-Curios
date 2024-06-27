@@ -1,0 +1,20 @@
+{
+  "itemGroup.de_curios": "Doomed Engine - Curios",
+
+  "item.de_curios.phantasmal_hood": "Phantasmal Hood",
+  "item.de_curios.kimen": "Kimen",
+  "item.de_curios.gluttony_necklace": "Gluttony Necklace",
+  "item.de_curios.monk_leglet": "Monk Leglet",
+
+  "advancement.de_curios.root": "Master Piece from Cestoriza_",
+  "advancement.de_curios.root.desc": "Find your very first curio made for Doomed Engine",
+  "advancement.de_curios.phantasmal_hood": "Cracking Magic",
+  "advancement.de_curios.phantasmal_hood.desc": "Get the curio Phantasmal Hood",
+  "advancement.de_curios.kimen": "Universal camouflage",
+  "advancement.de_curios.kimen.desc": "Get the curio Kimen",
+  "advancement.de_curios.gluttony_necklace": "Everything taste like Golden Apple",
+  "advancement.de_curios.gluttony_necklace.desc": "Get the curio Gluttony Necklace",
+  "advancement.de_curios.monk_leglet": "Peacefully but Accomplished",
+  "advancement.de_curios.monk_leglet.desc": "Get the curio Monk Leglet"
+
+}

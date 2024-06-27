@@ -1,0 +1,38 @@
+{
+  "parent": "de_curios:root",
+  "criteria": {
+    "get_kimen": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "de_curios:kimen"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.de_curios.kimen.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "de_curios:kimen"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.de_curios.kimen"
+    }
+  },
+  "requirements": [
+    [
+      "get_kimen"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

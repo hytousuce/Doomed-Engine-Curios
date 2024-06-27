@@ -1,0 +1,38 @@
+{
+  "parent": "de_curios:root",
+  "criteria": {
+    "get_phantasmal_hood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "de_curios:phantasmal_hood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.de_curios.phantasmal_hood.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "de_curios:phantasmal_hood"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.de_curios.phantasmal_hood"
+    }
+  },
+  "requirements": [
+    [
+      "get_phantasmal_hood"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

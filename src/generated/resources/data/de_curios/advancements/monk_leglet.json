@@ -1,0 +1,38 @@
+{
+  "parent": "de_curios:root",
+  "criteria": {
+    "get_monk_leglet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "de_curios:monk_leglet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.de_curios.monk_leglet.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "de_curios:monk_leglet"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.de_curios.monk_leglet"
+    }
+  },
+  "requirements": [
+    [
+      "get_monk_leglet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

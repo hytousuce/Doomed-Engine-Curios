@@ -1,0 +1,38 @@
+{
+  "parent": "de_curios:root",
+  "criteria": {
+    "get_gluttony_necklace": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "de_curios:gluttony_necklace"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.de_curios.gluttony_necklace.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "de_curios:gluttony_necklace"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.de_curios.gluttony_necklace"
+    }
+  },
+  "requirements": [
+    [
+      "get_gluttony_necklace"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
