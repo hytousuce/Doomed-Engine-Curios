@@ -4,7 +4,10 @@ import com.hytousuce.de_curios.DECuriosConstants;
 import com.hytousuce.de_curios.lib.DECuriosTags;
 import com.hytousuce.de_curios.registry.DECuriosItems;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.FrameType;
+import net.minecraft.advancements.RequirementsStrategy;
+import net.minecraft.advancements.critereon.ConsumeItemTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
@@ -13,10 +16,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import org.jetbrains.annotations.NotNull;
+import top.theillusivec4.curios.api.CuriosTriggers;
+import top.theillusivec4.curios.api.SlotPredicate;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -58,11 +64,19 @@ public class DECuriosAdvancementProvider {
                     .parent(root)
                     .save(saver, getNameId("monk_leglet"));
 
-            Advancement.Builder.advancement()
+            Advancement getGluttonyNecklace = Advancement.Builder.advancement()
                     .addCriterion("get_gluttony_necklace", onPickUp(DECuriosItems.GLUTTONY_NECKLACE.get()))
                     .display(DECuriosItems.GLUTTONY_NECKLACE.get(), Component.translatable("advancement.de_curios.gluttony_necklace"), Component.translatable("advancement.de_curios.gluttony_necklace.desc"),null , FrameType.TASK ,true, true, false)
                     .parent(root)
                     .save(saver, getNameId("gluttony_necklace"));
+
+//            Advancement.Builder.advancement()
+//                    .addCriterion("wearing_gluttony_necklace", onEquipCurio("necklace", DECuriosItems.GLUTTONY_NECKLACE.get()))
+//                    .addCriterion("eat_golden_apple", onEat(Items.GOLDEN_APPLE, Items.ENCHANTED_GOLDEN_APPLE))
+//                    .requirements(RequirementsStrategy.AND)
+//                    .display(Items.GOLDEN_APPLE, Component.translatable("advancement.de_curios.eat_golden_apple_with_gluttony_necklace"), Component.translatable("advancement.de_curios.eat_golden_apple_with_gluttony_necklace.desc"), null, FrameType.CHALLENGE, true, true, true)
+//                    .parent(getGluttonyNecklace)
+//                    .save(saver, getNameId("eat_golden_apple_with_gluttony_necklace"));
         }
 
         protected InventoryChangeTrigger.TriggerInstance onPickUp(TagKey<Item> tag) {
@@ -71,6 +85,10 @@ public class DECuriosAdvancementProvider {
 
         protected InventoryChangeTrigger.TriggerInstance onPickUp(ItemLike... items) {
             return InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(items).build());
+        }
+
+        protected ConsumeItemTrigger.TriggerInstance onEat(ItemLike... foods){
+            return ConsumeItemTrigger.TriggerInstance.usedItem(ItemPredicate.Builder.item().of(foods).build());
         }
     }
 }
